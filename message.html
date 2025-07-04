@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kamran Khan (@ManikRahuja) / Twitter</title>
+    <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon" />
+    <!-- google material api -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="css/all.css" />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/notification.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/profile.css" />
+    <link rel="stylesheet" href="css/message.css" />
+  </head>
+  <body onload="document.querySelector('#loadd').style.display='none'">
+    <div id="loadd"><img src="images/twitter_logo.png" alt="" /></div>
+    <div class="fix-footer">
+      <a href="main.html"><ion-icon name="home-outline"></ion-icon></a>
+      <ion-icon name="search-outline"></ion-icon>
+      <a href="notification.html"
+        ><ion-icon name="notifications-outline"></ion-icon
+      ></a>
+      <ion-icon name="mail"></ion-icon>
+    </div>
+    <div class="container">
+      <div class="side-bar"></div>
+
+      <div
+        class="side-bar sider"
+        style="padding-left: 1rem; z-index: 199; height: 100vh"
+      >
+        <ul class="nav-bar">
+          <li class="nav-bar-brand">
+            <a href="#">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="main.html" class="item-icon">
+              <ion-icon name="home-outline"></ion-icon>
+            </a>
+            <a href="main.html" class="item-link">Home</a>
+          </li>
+          <li class="nav-item hshh" style="padding-top: 0; padding-bottom: 0">
+            <a
+              href="explore.html"
+              class="item-icon hash"
+              style="font-weight: 300"
+            >
+              <span>#</span>
+            </a>
+            <a href="explore.html" class="item-link">Explore</a>
+          </li>
+          <li class="nav-item">
+            <a href="notification.html" class="item-icon">
+              <ion-icon name="notifications-outline"></ion-icon>
+            </a>
+            <a href="notification.html" class="item-link">Notifications</a>
+          </li>
+          <li class="nav-item hash">
+            <a href="#" class="item-icon">
+              <ion-icon name="mail"></ion-icon>
+            </a>
+            <a href="#" class="item-link">Messages</a>
+          </li>
+          <li class="nav-item">
+            <a href="book.html" class="item-icon">
+              <ion-icon name="bookmark-outline"></ion-icon>
+            </a>
+            <a href="book.html" class="item-link">Bookmarks</a>
+          </li>
+          <li class="nav-item">
+            <a href="profile.html" class="item-icon">
+              <ion-icon name="person-outline"></ion-icon>
+            </a>
+            <a href="profile.html" class="item-link">Profile</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="item-icon">
+              <ion-icon name="ellipsis-horizontal-circle-outline"></ion-icon>
+            </a>
+            <a href="#" class="item-link">More</a>
+          </li>
+          <li class="nav-item tweet-btn-li">
+            <button>
+              <ion-icon name="leaf-outline" id="leaf"></ion-icon
+              ><span>Tweet</span>
+            </button>
+          </li>
+          <!-- <li class="nav-item user-info">
+  
+            </li> -->
+        </ul>
+        <div class="nav-item user-info" onclick="show()">
+          <ul class="user-info-hidden">
+            <li>Add an existing account</li>
+            <li onclick="window.open('index.html','_self')">
+              Log out @ManikRahuja
+            </li>
+          </ul>
+          <div>
+            <img src="images/user.jpg" alt="" />
+            <div>
+              <p>
+                Kamran Khan <ion-icon name="lock-closed-outline"></ion-icon>
+              </p>
+              <small>@ManikRahuja</small>
+            </div>
+          </div>
+          <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+        </div>
+      </div>
+
+      <div class="right-sidebar">
+        <div class="home-top">
+          <a href="profile.html"><img src="./images/user.jpg" alt="" /></a>
+          <div id="hhh">
+            <h2>Messages</h2>
+            <div class="ionn" style="display: block">
+              <ion-icon name="settings-outline"></ion-icon>
+              <ion-icon name="mail-outline" id="mm"></ion-icon>
+            </div>
+          </div>
+        </div>
+
+        <div class="dddd">
+          <h1>Welcome to your inbox!</h1>
+          <p>
+            Drop a line, share Tweets and more with private conversations
+            between you and others on Twitter.
+          </p>
+
+          <button
+            style="
+              color: white;
+              background: #1d9bf0;
+              border: unset;
+              border-radius: 99rem;
+              padding: 0.8rem 2rem;
+              font-weight: 700;
+              margin-top: 2rem;
+              font-size: 1.2rem;
+            "
+          >
+            Write a message
+          </button>
+        </div>
+      </div>
+
+      <div class="main">
+        <!-- <div class="dddd"> -->
+        <div>
+          <h1>Select a message</h1>
+          <p>
+            Choose from your existing conversations, start a new one, or just
+            keep swimming.
+          </p>
+
+          <button
+            style="
+              color: white;
+              background: #1d9bf0;
+              border: unset;
+              border-radius: 99rem;
+              padding: 0.8rem 2rem;
+              font-weight: 700;
+              margin-top: 2rem;
+              font-size: 1.2rem;
+            "
+          >
+            New message
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- custom js -->
+    <script src="js/profile.js"></script>
+    <script src="js/home.js"></script>
+    <!-- font awesome -->
+    <script src="js/all.js"></script>
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- ion icons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

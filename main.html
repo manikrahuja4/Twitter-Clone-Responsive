@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home / Twitter</title>
+    <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon" />
+    <!-- google material api -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="css/all.css" />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body onload="document.querySelector('#loadd').style.display='none'">
+    <div id="loadd"><img src="images/twitter_logo.png" alt="" /></div>
+
+    <div class="container">
+      <div class="fix-header" id="head-fix">
+        <a href="profile.html"><img src="images/user.jpg" alt="" /></a>
+        <ion-icon name="logo-twitter" onclick="location.reload()"></ion-icon>
+        <div></div>
+      </div>
+      <div class="fix-footer">
+        <a href="main.html"><ion-icon name="home"></ion-icon></a>
+        <ion-icon
+          name="search-outline"
+          onclick="window.open('explore.html', '_self')"
+        ></ion-icon>
+        <a href="notification.html"
+          ><ion-icon name="notifications-outline"></ion-icon
+        ></a>
+        <a href="message.html"><ion-icon name="mail-outline"></ion-icon></a>
+      </div>
+      <div class="side-bar"></div>
+
+      <div
+        class="side-bar sider"
+        style="padding-left: 1rem; z-index: 199; height: 100vh"
+      >
+        <ul class="nav-bar">
+          <li class="nav-bar-brand">
+            <a href="#">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+          <li class="nav-item hash">
+            <a href="#" class="item-icon">
+              <ion-icon name="home"></ion-icon>
+            </a>
+            <a href="#" class="item-link">Home</a>
+          </li>
+          <li class="nav-item hshh" style="padding-top: 0; padding-bottom: 0">
+            <a
+              href="explore.html"
+              class="item-icon hash"
+              style="font-weight: 300"
+            >
+              <span>#</span>
+            </a>
+            <a href="explore.html" class="item-link">Explore</a>
+          </li>
+          <li class="nav-item">
+            <a href="notification.html" class="item-icon">
+              <ion-icon name="notifications-outline"></ion-icon>
+            </a>
+            <a href="notification.html" class="item-link">Notifications</a>
+          </li>
+          <li class="nav-item">
+            <a href="message.html" class="item-icon">
+              <ion-icon name="mail-outline"></ion-icon>
+            </a>
+            <a href="message.html" class="item-link">Messages</a>
+          </li>
+          <li class="nav-item">
+            <a href="book.html" class="item-icon">
+              <ion-icon name="bookmark-outline"></ion-icon>
+            </a>
+            <a href="book.html" class="item-link">Bookmarks</a>
+          </li>
+          <li class="nav-item">
+            <a href="profile.html" class="item-icon">
+              <ion-icon name="person-outline"></ion-icon>
+            </a>
+            <a href="profile.html" class="item-link">Profile</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="item-icon">
+              <ion-icon name="ellipsis-horizontal-circle-outline"></ion-icon>
+            </a>
+            <a href="#" class="item-link">More</a>
+          </li>
+          <li class="nav-item tweet-btn-li">
+            <button>
+              <ion-icon name="leaf-outline" id="leaf"></ion-icon
+              ><span>Tweet</span>
+            </button>
+          </li>
+          <!-- <li class="nav-item user-info">
+
+          </li> -->
+        </ul>
+        <div class="nav-item user-info" onclick="show()">
+          <ul class="user-info-hidden">
+            <li>Add an existing account</li>
+            <li onclick="window.open('index.html','_self')">
+              Log out @ManikRahuja
+            </li>
+          </ul>
+          <div>
+            <img src="images/user.jpg" alt="" />
+            <div>
+              <p>
+                Kamran Khan <ion-icon name="lock-closed-outline"></ion-icon>
+              </p>
+              <small>@ManikRahuja</small>
+            </div>
+          </div>
+          <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+        </div>
+      </div>
+      <div class="main">
+        <div class="top-main-home">
+          <h2 id="hide-h2">Home</h2>
+          <ul>
+            <li>For you</li>
+            <li>Following</li>
+          </ul>
+        </div>
+        <div class="feed-put">
+          <img src="images/user.jpg" alt="" />
+          <div class="input-divv">
+            <input type="text" feed-input placeholder="What's happening?" />
+            <div>
+              <div>
+                <ion-icon name="image-outline"></ion-icon>
+                <ion-icon name="camera-outline"></ion-icon>
+                <ion-icon name="list-outline"></ion-icon>
+                <ion-icon name="happy-outline"></ion-icon>
+                <ion-icon name="calendar-clear-outline"></ion-icon>
+                <ion-icon name="location-outline"></ion-icon>
+              </div>
+              <button class="follow-btn">Tweet</button>
+            </div>
+          </div>
+        </div>
+        <div class="show-more">Show 266 Tweets</div>
+        <div class="main-posts" style="border-top: 0">
+          <!-- <h3>Cats</h3> -->
+          <div class="post">
+            <img class="profile-img" src="images/cat1.png" alt="" />
+            <div class="post-main">
+              <div>
+                <span style="overflow: hidden"
+                  ><a href="#" class="o-flow"
+                    >Cats That Heal Your Depression</a
+                  >
+                  <a href="#" style="color: #71767b"
+                    >@Catshealdeprsn &middot; 15h</a
+                  ></span
+                >
+                <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+              </div>
+              <small>Love</small>
+              <img src="/images/post1.png" class="post-img" alt="" />
+              <div class="icons-post">
+                <a href="#"
+                  ><ion-icon name="chatbubble-outline"></ion-icon> 46</a
+                >
+                <a href="#"
+                  ><ion-icon name="repeat-outline"></ion-icon> 2,007</a
+                >
+                <a href="#"><ion-icon name="heart-outline"></ion-icon> 13.5K</a>
+                <a href="#"
+                  ><ion-icon name="stats-chart-outline"></ion-icon> 247.6K</a
+                >
+                <a href="#"
+                  ><ion-icon
+                    name="download-outline"
+                    class="share"
+                    style="font-size: 1.4rem"
+                  ></ion-icon
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="post first-post" 
+          >
+            <img class="profile-img" src="images/cat3.png" alt="" />
+            <div class="post-main">
+              <div>
+                <span style="overflow: hidden"
+                  ><a href="#" class="o-flow">Jasmine</a>
+                  <a href="#" style="color: #71767b"
+                    >@astro_jaz &middot; 15h</a
+                  ></span
+                >
+                <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+              </div>
+              <small> NEW JWST IMAGE OF CASSIOPEIA A!!!</small>
+              <img
+                src="/images/post3.png"
+                id="cat-img"
+                class="post-img"
+                alt=""
+              />
+              <div class="icons-post">
+                <a href="#"
+                  ><ion-icon name="chatbubble-outline"></ion-icon> 648</a
+                >
+                <a href="#"><ion-icon name="repeat-outline"></ion-icon> 636</a>
+                <a href="#"><ion-icon name="heart-outline"></ion-icon> 10.2K</a>
+                <a href="#"
+                  ><ion-icon name="stats-chart-outline"></ion-icon> 248.8K</a
+                >
+                <a href="#"
+                  ><ion-icon
+                    name="download-outline"
+                    class="share"
+                    style="font-size: 1.4rem"
+                  ></ion-icon
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="post first-post">
+            <img class="profile-img" src="images/cat2.png" alt="" />
+            <div class="post-main">
+              <div>
+                <span style="overflow: hidden"
+                  ><a href="#" class="o-flow"
+                    >translated cats</a
+                  >
+                  <a href="#" style="color: #71767b"
+                    >@TranslatedCats &middot; 23h</a
+                  ></span
+                >
+                <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+              </div>
+              <small>Please give me a name. I am a girl. I am a cat.</small>
+              <img
+                src="/images/post2.png"
+                id="cat-img"
+                class="post-img"
+                alt=""
+              />
+              <div class="icons-post">
+                <a href="#"
+                  ><ion-icon name="chatbubble-outline"></ion-icon> 648</a
+                >
+                <a href="#"><ion-icon name="repeat-outline"></ion-icon> 636</a>
+                <a href="#"><ion-icon name="heart-outline"></ion-icon> 10.2K</a>
+                <a href="#"
+                  ><ion-icon name="stats-chart-outline"></ion-icon> 248.8K</a
+                >
+                <a href="#"
+                  ><ion-icon
+                    name="download-outline"
+                    class="share"
+                    style="font-size: 1.4rem"
+                  ></ion-icon
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="follow-divs who-follow">
+            <h3>Who to follow</h3>
+            <div class="ff">
+              <div>
+                <img src="images/f1.jpg" alt="" />
+                <div>
+                  <p style="display: flex; align-items: center; gap: 0.2rem">
+                    Elon Musk
+                    <span class="material-icons post__badge"> verified </span>
+                  </p>
+                  <small>@elonmusk</small>
+                </div>
+              </div>
+              <button class="follow-btn">Follow</button>
+            </div>
+            <div class="ff">
+              <div>
+                <img src="images/f2.jpg" alt="" />
+                <div>
+                  <p style="display: flex; align-items: center; gap: 0.2rem">
+                    ESA
+                    <span class="material-icons post__badge"> verified </span>
+                  </p>
+                  <small>@esa</small>
+                </div>
+              </div>
+              <button class="follow-btn">Follow</button>
+            </div>
+            <div class="ff">
+              <div>
+                <img src="images/f3.jpg" alt="" />
+                <div>
+                  <p style="display: flex; align-items: center; gap: 0.2rem">
+                    Barack Obama
+                    <span class="material-icons post__badge"> verified </span>
+                  </p>
+                  <small>@BarackObama</small>
+                </div>
+              </div>
+              <button class="follow-btn">Follow</button>
+            </div>
+            <a href="#">Show more</a>
+          </div>
+          <!-- <a href="#" style="margin: 0 10%; color: #1d9bf0">Show more</a> -->
+          <div class="post">
+            <img class="profile-img" src="images/cat1.png" alt="" />
+            <div class="post-main">
+              <div>
+                <span style="overflow: hidden"
+                  ><a href="#" class="o-flow"
+                    >Cats That Heal Your Depression</a
+                  >
+                  <a href="#" style="color: #71767b"
+                    >@Catshealdeprsn &middot; 15h</a
+                  ></span
+                >
+                <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+              </div>
+              <small>Love</small>
+              <img src="/images/post1.png" class="post-img" alt="" />
+              <div class="icons-post">
+                <a href="#"
+                  ><ion-icon name="chatbubble-outline"></ion-icon> 46</a
+                >
+                <a href="#"
+                  ><ion-icon name="repeat-outline"></ion-icon> 2,007</a
+                >
+                <a href="#"><ion-icon name="heart-outline"></ion-icon> 13.5K</a>
+                <a href="#"
+                  ><ion-icon name="stats-chart-outline"></ion-icon> 247.6K</a
+                >
+                <a href="#"
+                  ><ion-icon
+                    name="download-outline"
+                    class="share"
+                    style="font-size: 1.4rem"
+                  ></ion-icon
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="post first-post" 
+          >
+            <img class="profile-img" src="images/cat3.png" alt="" />
+            <div class="post-main">
+              <div>
+                <span style="overflow: hidden"
+                  ><a href="#" class="o-flow">Jasmine</a>
+                  <a href="#" style="color: #71767b"
+                    >@astro_jaz &middot; 15h</a
+                  ></span
+                >
+                <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+              </div>
+              <small> NEW JWST IMAGE OF CASSIOPEIA A!!!</small>
+              <img
+                src="/images/post3.png"
+                id="cat-img"
+                class="post-img"
+                alt=""
+              />
+              <div class="icons-post">
+                <a href="#"
+                  ><ion-icon name="chatbubble-outline"></ion-icon> 648</a
+                >
+                <a href="#"><ion-icon name="repeat-outline"></ion-icon> 636</a>
+                <a href="#"><ion-icon name="heart-outline"></ion-icon> 10.2K</a>
+                <a href="#"
+                  ><ion-icon name="stats-chart-outline"></ion-icon> 248.8K</a
+                >
+                <a href="#"
+                  ><ion-icon
+                    name="download-outline"
+                    class="share"
+                    style="font-size: 1.4rem"
+                  ></ion-icon
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="post first-post">
+            <img class="profile-img" src="images/cat2.png" alt="" />
+            <div class="post-main">
+              <div>
+                <span style="overflow: hidden"
+                  ><a href="#" class="o-flow"
+                    >translated cats</a
+                  >
+                  <a href="#" style="color: #71767b"
+                    >@TranslatedCats &middot; 23h</a
+                  ></span
+                >
+                <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+              </div>
+              <small>Please give me a name. I am a girl. I am a cat.</small>
+              <img
+                src="/images/post2.png"
+                id="cat-img"
+                class="post-img"
+                alt=""
+              />
+              <div class="icons-post">
+                <a href="#"
+                  ><ion-icon name="chatbubble-outline"></ion-icon> 648</a
+                >
+                <a href="#"><ion-icon name="repeat-outline"></ion-icon> 636</a>
+                <a href="#"><ion-icon name="heart-outline"></ion-icon> 10.2K</a>
+                <a href="#"
+                  ><ion-icon name="stats-chart-outline"></ion-icon> 248.8K</a
+                >
+                <a href="#"
+                  ><ion-icon
+                    name="download-outline"
+                    class="share"
+                    style="font-size: 1.4rem"
+                  ></ion-icon
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right-sidebar">
+        <div class="home-top">
+          <div class="searchbar" id="home-searchbar">
+            <ion-icon id="home-search-icon" name="search-outline"></ion-icon>
+            <input type="search" placeholder="Search Twitter" id="home-ss" />
+            <div class="absolute">
+              <p>Try searching for people, topics or keywords</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-main-content">
+          <h3>Trends for you</h3>
+          <div class="main-divs">
+            <div>
+              <small>Politics &middot; Trending</small>
+              <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+            </div>
+            <p>#Taiwan</p>
+            <small>7,806 Tweets</small>
+          </div>
+          <div class="main-divs">
+            <div>
+              <small>Politics &middot; Trending</small>
+              <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+            </div>
+            <p>Trending in Hong Kong SAR China</p>
+            <small>7,806 Tweets</small>
+          </div>
+          <div class="main-divs">
+            <div>
+              <small>Trending in Hong Kong SAR China</small>
+              <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+            </div>
+            <p>#China</p>
+            <small>7,806 Tweets</small>
+          </div>
+          <div class="main-divs">
+            <div>
+              <small>Trending in Hong Kong SAR China</small>
+              <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+            </div>
+            <p>#Japan</p>
+            <small>7,806 Tweets</small>
+          </div>
+          <div class="main-divs">
+            <div>
+              <small>Trending in Hong Kong SAR China</small>
+              <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+            </div>
+            <p>Ma Ying</p>
+            <small>7,806 Tweets</small>
+          </div>
+          <div class="main-divs">
+            <div>
+              <small>Business & Finance &middot; Trending</small>
+              <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+            </div>
+            <p>#USDT</p>
+            <small>7,806 Tweets</small>
+          </div>
+          <div class="main-divs">
+            <div>
+              <small>Politics &middot; Trending</small>
+              <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+            </div>
+            <p>#Taiwan</p>
+            <small>7,806 Tweets</small>
+          </div>
+          <div class="main-divs">
+            <div>
+              <small>Politics &middot; Trending</small>
+              <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+            </div>
+            <p>Trending in Hong Kong SAR China</p>
+            <small>7,806 Tweets</small>
+          </div>
+          <div class="main-divs">
+            <div>
+              <small>Trending in Hong Kong SAR China</small>
+              <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+            </div>
+            <p>#China</p>
+            <small>7,806 Tweets</small>
+          </div>
+          <div class="main-divs">
+            <div>
+              <small>Trending in Hong Kong SAR China</small>
+              <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+            </div>
+            <p>#Japan</p>
+            <small>7,806 Tweets</small>
+          </div>
+          <div class="main-divs">
+            <div>
+              <small>Trending in Hong Kong SAR China</small>
+              <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+            </div>
+            <p>Ma Ying</p>
+            <small>7,806 Tweets</small>
+          </div>
+          <a href="#" style="color: #1d9bf0; margin-top: 1rem">Show more</a>
+        </div>
+
+        <div class="sidebar-main-content follow-divs" style="padding-inline: 0">
+          <h3>Who to follow</h3>
+          <div class="ff">
+            <div>
+              <img src="images/f1.jpg" alt="" />
+              <div>
+                <p style="display: flex; align-items: center; gap: 0.2rem">
+                  Elon Musk
+                  <span class="material-icons post__badge"> verified </span>
+                </p>
+                <small>@elonmusk</small>
+              </div>
+            </div>
+            <button class="follow-btn">Follow</button>
+          </div>
+          <div class="ff">
+            <div>
+              <img src="images/f2.jpg" alt="" />
+              <div>
+                <p style="display: flex; align-items: center; gap: 0.2rem">
+                  ESA
+                  <span class="material-icons post__badge"> verified </span>
+                </p>
+                <small>@esa</small>
+              </div>
+            </div>
+            <button class="follow-btn">Follow</button>
+          </div>
+          <div class="ff">
+            <div>
+              <img src="images/f3.jpg" alt="" />
+              <div>
+                <p style="display: flex; align-items: center; gap: 0.2rem">
+                  Barack Obama
+                  <span class="material-icons post__badge"> verified </span>
+                </p>
+                <small>@BarackObama</small>
+              </div>
+            </div>
+            <button class="follow-btn">Follow</button>
+          </div>
+          <a href="#">Show more</a>
+        </div>
+      </div>
+    </div>
+    <!-- custom js -->
+    <script src="js/home.js"></script>
+    <!-- font awesome -->
+    <script src="js/all.js"></script>
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- ion icons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

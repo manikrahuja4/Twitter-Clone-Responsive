@@ -1,0 +1,86 @@
+.side-bar.sider {
+  border-right: 0.5px solid #fff4;
+}
+.right-sidebar {
+  max-width: unset;
+  padding: 0.8rem 1rem;
+  border-left: unset;
+}
+.home-top {
+  display: flex;
+  gap: 0.4rem;
+}
+.home-top img {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: none;
+}
+#hhh {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  color: white;
+}
+#hhh h2 {
+  font-size: 20px;
+}
+#hhh ion-icon {
+  font-size: 1.1rem;
+}
+.dddd {
+  min-width: unset;
+  padding: 1rem 0;
+  width: 90%;
+}
+#mm {
+  margin-left: 0.2rem;
+}
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main div h1 {
+  font-size: 31px;
+}
+.main div p {
+  color: #71767b;
+}
+.main div {
+  width: 55%;
+}
+@media (max-width: 1000px) {
+  .right-sidebar {
+    display: block;
+    width: 93%;
+  }
+  .main {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .right-sidebar {
+    width: 100%;
+    padding: 0.8rem 0.5rem;
+  }
+  .home-top img {
+    display: block;
+  }
+  #hhh {
+    width: 90%;
+  }
+  #mm {
+    display: none;
+  }
+}
+@media (prefers-color-scheme: light) {
+.side-bar.sider{
+  border-right: 1px solid #0003;
+}
+#hhh{
+  color: #000;
+}
+}

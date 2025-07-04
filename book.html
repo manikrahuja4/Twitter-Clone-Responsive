@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmarks / Twitter</title>
+    <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon" />
+    <!-- google material api -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="css/all.css" />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/profile.css" />
+    <link rel="stylesheet" href="css/notification.css" />
+  </head>
+  <body onload="document.querySelector('#loadd').style.display='none'">
+    <div id="loadd"><img src="images/twitter_logo.png" alt="" /></div>
+    <div class="container">
+      <div class="fix-footer">
+        <a href="main.html"><ion-icon name="home-outline"></ion-icon></a>
+        <ion-icon
+          name="search-outline"
+          onclick="window.open('explore.html', '_self')"
+        ></ion-icon>
+        <a href="notification.html"
+          ><ion-icon name="notifications-outline"></ion-icon
+        ></a>
+        <a href="message.html"><ion-icon name="mail-outline"></ion-icon></a>
+      </div>
+      <div class="side-bar"></div>
+
+      <div
+        class="side-bar sider"
+        style="padding-left: 1rem; z-index: 199; height: 100vh"
+      >
+        <ul class="nav-bar">
+          <li class="nav-bar-brand">
+            <a href="#">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="main.html" class="item-icon">
+              <ion-icon name="home-outline"></ion-icon>
+            </a>
+            <a href="main.html" class="item-link">Home</a>
+          </li>
+          <li class="nav-item" style="padding-top: 0; padding-bottom: 0">
+            <a
+              href="explore.html"
+              class="item-icon hash"
+              style="font-weight: 300"
+            >
+              <span>#</span>
+            </a>
+            <a href="explore.html" class="item-link">Explore</a>
+          </li>
+          <li class="nav-item">
+            <a href="notification.html" class="item-icon">
+              <ion-icon name="notifications-outline"></ion-icon>
+            </a>
+            <a href="notification.html" class="item-link">Notifications</a>
+          </li>
+          <li class="nav-item">
+            <a href="message.html" class="item-icon">
+              <ion-icon name="mail-outline"></ion-icon>
+            </a>
+            <a href="message.html" class="item-link">Messages</a>
+          </li>
+          <li class="nav-item hash">
+            <a href="#" class="item-icon">
+              <ion-icon name="bookmark"></ion-icon>
+            </a>
+            <a href="#" class="item-link">Bookmarks</a>
+          </li>
+          <li class="nav-item">
+            <a href="profile.html" class="item-icon">
+              <ion-icon name="person-outline"></ion-icon>
+            </a>
+            <a href="profile.html" class="item-link">Profile</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="item-icon">
+              <ion-icon name="ellipsis-horizontal-circle-outline"></ion-icon>
+            </a>
+            <a href="#" class="item-link">More</a>
+          </li>
+          <li class="nav-item tweet-btn-li">
+            <button>
+              <ion-icon name="leaf-outline" id="leaf"></ion-icon
+              ><span>Tweet</span>
+            </button>
+          </li>
+          <!-- <li class="nav-item user-info">
+  
+            </li> -->
+        </ul>
+        <div class="nav-item user-info" onclick="show()">
+          <ul class="user-info-hidden">
+            <li>Add an existing account</li>
+            <li onclick="window.open('index.html', '_self')">
+              Log out @ManikRahuja
+            </li>
+          </ul>
+          <div>
+            <img src="images/user.jpg" alt="" />
+            <div>
+              <p>
+                Kamran Khan <ion-icon name="lock-closed-outline"></ion-icon>
+              </p>
+              <small>@ManikRahuja</small>
+            </div>
+          </div>
+          <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+        </div>
+      </div>
+      <style>
+        @media (min-width: 500px) {
+          .prof-top a {
+            display: none;
+          }
+        }
+      </style>
+      <div class="main">
+        <div class="prof-top">
+          <a href="main.html" id="a-link"
+            ><ion-icon name="arrow-back-outline"></ion-icon
+          ></a>
+          <div>
+            <h2 style="font-size: 20px; margin-bottom: 0">Bookmarks</h2>
+            <p style="color: #5d6065">@ManikRahuja</p>
+          </div>
+        </div>
+        <div class="dddd">
+          <img
+            src="./images/book-img.png"
+            style="width: 90%; margin-top: 2rem; margin-left: 5%"
+          />
+          <h1>Save Tweets for later</h1>
+          <p>
+            Don’t let the good ones fly away! Bookmark Tweets to easily find
+            them again in the future.
+          </p>
+        </div>
+      </div>
+
+      <div class="right-sidebar">
+        <div class="home-top">
+          <div class="searchbar" id="home-searchbar">
+            <ion-icon id="home-search-icon" name="search-outline"></ion-icon>
+            <input type="search" placeholder="Search Twitter" id="home-ss" />
+            <div class="absolute">
+              <p>Try searching for people, topics or keywords</p>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-main-content">
+          <h3>Trends for you</h3>
+          <div class="main-divs">
+            <div>
+              <small>Politics &middot; Trending</small>
+              <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+            </div>
+            <p>#Taiwan</p>
+            <small>7,806 Tweets</small>
+          </div>
+          <div class="main-divs">
+            <div>
+              <small>Politics &middot; Trending</small>
+              <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+            </div>
+            <p>Trending in Hong Kong SAR China</p>
+            <small>7,806 Tweets</small>
+          </div>
+          <div class="main-divs">
+            <div>
+              <small>Trending in Hong Kong SAR China</small>
+              <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+            </div>
+            <p>#China</p>
+            <small>7,806 Tweets</small>
+          </div>
+          <div class="main-divs">
+            <div>
+              <small>Trending in Hong Kong SAR China</small>
+              <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+            </div>
+            <p>#Japan</p>
+            <small>7,806 Tweets</small>
+          </div>
+          <div class="main-divs">
+            <div>
+              <small>Trending in Hong Kong SAR China</small>
+              <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+            </div>
+            <p>Ma Ying</p>
+            <small>7,806 Tweets</small>
+          </div>
+          <div class="main-divs">
+            <div>
+              <small>Business & Finance &middot; Trending</small>
+              <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+            </div>
+            <p>#USDT</p>
+            <small>7,806 Tweets</small>
+          </div>
+          <div class="main-divs">
+            <div>
+              <small>Politics &middot; Trending</small>
+              <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+            </div>
+            <p>#Taiwan</p>
+            <small>7,806 Tweets</small>
+          </div>
+
+          <a href="#" style="color: #1d9bf0; margin-top: 1rem">Show more</a>
+        </div>
+        <div class="sidebar-main-content follow-divs" style="padding-inline: 0">
+          <h3>You might like</h3>
+          <div class="ff">
+            <div>
+              <img src="images/f1.jpg" alt="" />
+              <div>
+                <p style="display: flex; align-items: center; gap: 0.2rem">
+                  Elon Musk
+                  <span class="material-icons post__badge"> verified </span>
+                </p>
+                <small>@elonmusk</small>
+              </div>
+            </div>
+            <button class="follow-btn">Follow</button>
+          </div>
+          <div class="ff">
+            <div>
+              <img src="images/f2.jpg" alt="" />
+              <div>
+                <p style="display: flex; align-items: center; gap: 0.2rem">
+                  ESA
+                  <span class="material-icons post__badge"> verified </span>
+                </p>
+                <small>@esa</small>
+              </div>
+            </div>
+            <button class="follow-btn">Follow</button>
+          </div>
+          <div class="ff">
+            <div>
+              <img src="images/f3.jpg" alt="" />
+              <div>
+                <p style="display: flex; align-items: center; gap: 0.2rem">
+                  Barack Obama
+                  <span class="material-icons post__badge"> verified </span>
+                </p>
+                <small>@BarackObama</small>
+              </div>
+            </div>
+            <button class="follow-btn">Follow</button>
+          </div>
+          <a href="#">Show more</a>
+        </div>
+
+        <div class="text">
+          <div class="links">
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Cookie Policy</a>
+            <a href="#">Accessibility</a>
+            <a href="#">Ads info</a>
+            <a href="#" id="more"
+              >More<ion-icon name="ellipsis-horizontal-outline"></ion-icon
+            ></a>
+          </div>
+          <ul class="ul">
+            <li style="border-radius: 1rem 1rem 0 0">
+              <a href="#">About</a>
+            </li>
+
+            <li>
+              <a href="#">Status</a>
+            </li>
+
+            <li>
+              <a href="#">Twitter for Business</a>
+            </li>
+
+            <li style="border-radius: 0 0 1rem 1rem">
+              <a href="#">Developers</a>
+            </li>
+          </ul>
+
+          <div class="overlay"></div>
+
+          <small> &copy; 2023 Twitter, Inc. </small>
+        </div>
+      </div>
+    </div>
+    <!-- custom js -->
+    <script src="js/profile.js"></script>
+    <script src="js/home.js"></script>
+    <!-- font awesome -->
+    <script src="js/all.js"></script>
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- ion icons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

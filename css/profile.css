@@ -1,0 +1,278 @@
+.prof-top {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #e7e9ea;
+  padding: 0.5rem 1rem;
+  gap: 2rem;
+}
+.prof-top div h3 {
+  font-size: 1rem;
+  color: #e7e9ea;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+}
+.prof-top div small {
+  color: #6e767d;
+  font-size: 0.8rem;
+}
+.prof-top ion-icon {
+  font-size: 1.3rem;
+}
+.prof-top div h3 ion-icon {
+  font-size: 1rem;
+  margin-left: 0.2rem;
+}
+.gray-d {
+  background: #333639;
+  height: 200px;
+}
+.img-divv img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 4px solid black;
+  cursor: pointer;
+  object-fit: cover;
+}
+.img-divv button {
+  color: #fff;
+  background: transparent;
+  border-radius: 99rem;
+  border: 1.5px solid #fff4;
+  font-size: 0.95rem;
+  padding: 0.4rem 1rem;
+  font-weight: 700;
+}
+.img-divv {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  position: absolute;
+  top: 190px;
+  width: 100%;
+  padding: 0 1rem;
+}
+.main {
+  position: relative;
+}
+.img-divv button:hover {
+  background: #fff1;
+}
+.prof-text {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  color: #5c6166;
+  margin-top: 70px;
+  padding-left: 1rem;
+}
+.prof-text p {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.prof-text small {
+  font-size: 1rem;
+}
+.prof-text small span {
+  color: #fff;
+  font-weight: 700;
+}
+#manik {
+  margin-bottom: 0.7rem;
+}
+#join {
+  margin-bottom: 0.4rem;
+}
+@media (max-width: 500px) {
+  .gray-d {
+    height: 115px;
+  }
+  .img-divv {
+    top: 126px;
+  }
+  .img-divv img {
+    width: 95px;
+    height: 95px;
+  }
+  .prof-text {
+    margin-top: 50px;
+  }
+  .prof-text p {
+    font-size: 1rem;
+  }
+  .prof-text small {
+    font-size: 0.9rem;
+  }
+  #join {
+    margin-bottom: 0.2rem;
+  }
+}
+.lis {
+  display: flex;
+  align-items: center;
+  padding-left: 0;
+  margin-bottom: 0;
+  margin-top: 1rem;
+  border-bottom: 1px solid #fff4;
+}
+.lis li {
+  width: 25%;
+  text-align: center;
+  color: #fff;
+  padding: 0.8rem;
+  cursor: pointer;
+}
+.lis li:hover {
+  background: #fff1;
+}
+.lis li:nth-child(1) {
+  position: relative;
+}
+.lis li:nth-child(1)::before {
+  content: "";
+  height: 3px;
+  width: 30%;
+  background: #1d9bf0;
+  position: absolute;
+  bottom: 0;
+  border-radius: 99rem;
+}
+@media only screen and (min-width: 350px) and (max-width: 720px) {
+  .lis li:nth-child(1)::before {
+    width: 45%;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .lis li:nth-child(1)::before {
+    width: 60%;
+  }
+}
+.setup {
+  padding: 1rem;
+  border-bottom: 1px solid #fff4;
+}
+#set-p {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #e7e9ea;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+#set-p ion-icon {
+  color: #5c6166;
+}
+.notif-divs {
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
+}
+.notif {
+  color: #e7e9ea;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.9rem 1rem;
+  border-radius: 1rem;
+}
+.notif:hover {
+  background: #1d9cf01a;
+}
+.notif p {
+  padding-left: 0.5rem;
+  margin-top: 0.2rem;
+}
+.notif img {
+  height: 93px;
+  width: 155px;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+.notif-divs::-webkit-scrollbar {
+  display: none;
+}
+.learn {
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: #1d9bf0;
+  cursor: pointer;
+}
+.learn ion-icon {
+  font-size: 1.4rem;
+}
+.learn span {
+  text-align: center;
+  width: 150px !important;
+}
+.follow-whoo .follow-divs div {
+  align-items: flex-start;
+}
+#nasa {
+  margin: 0;
+  /* color: gold; */
+}
+@media (max-width: 420px) {
+  .ppp {
+    font-size: 0.85rem;
+    line-height: 1.2;
+  }
+}
+#a-link{
+  color: #e7e9ea
+}
+@media (prefers-color-scheme: light) {
+.prof-top{
+  color: #000;
+}
+#a-link{
+  color: #000;
+}
+.gray-d{
+  background: #cfd9de;
+}
+.img-divv img{
+  border-color: #fff;
+}
+.prof-top div h3{
+  color: #000;
+}
+.prof-text small span{
+  color: #000;
+}
+.lis li{
+  color: #8a8989;
+}
+.lis li:nth-child(1){
+  color: #000;
+}
+.lis li:hover{
+  background: rgba(87, 87, 87, 0.075);
+}
+.lis, .setup{
+  border-bottom: 1px solid #0003;
+}
+#set-p, .notif{
+  color: #000;
+}
+.prof-text p{
+  color: #000;
+}
+
+.img-divv button {
+  color: #000;
+  background: transparent;
+  border-radius: 99rem;
+  border: 0.7px solid #141414;
+  font-size: 0.95rem;
+  padding: 0.4rem 1rem;
+  font-weight: 700;
+}
+}

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore / Twitter</title>
+    <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon" />
+    <!-- font awesome -->
+    <link rel="stylesheet" href="css/all.css" />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      body {
+        padding: 0;
+      }
+      @media (max-width: 1000px) {
+        .main {
+          width: 90.8%;
+        }
+      }
+
+      @media (max-width: 500px) {
+        body {
+          padding: 0 !important;
+        }
+      }
+
+      @media (min-width: 1300px) {
+        .container {
+          --bs-gutter-x: 0 !important;
+        }
+      }
+      .side-bar.sider{
+        border-right: 1px solid #fff4;
+        padding-left: 1rem
+      }
+      #longo{
+        font-size: 1.5rem; 
+        color: #d9d9d9
+      }
+      @media (prefers-color-scheme: light) {
+        .side-bar.sider{
+          border-right: 1px solid #0003;
+        }
+        #longo{
+          color: #1d9bf0;
+        }
+      }
+    </style>
+  </head>
+  <body onload="document.querySelector('#loadd').style.display='none'">
+    <div id="loadd"><img src="images/twitter_logo.png" alt="" /></div>
+
+    <div class="container">
+      <div class="side-bar"></div>
+      <div
+        class="side-bar sider"
+      >
+        <ul class="nav-bar">
+          <li class="nav-bar-brand">
+            <a href="#">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+          <li class="nav-item hash hshh">
+            <a href="#" class="item-icon hash">
+              <span>#</span>
+            </a>
+            <a href="#" class="item-link">Explore</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="item-icon">
+              <ion-icon name="settings-outline"></ion-icon>
+            </a>
+            <a href="#" class="item-link">Settings</a>
+          </li>
+        </ul>
+      </div>
+      <div class="main">
+        <div class="top">
+          <ion-icon
+            class="ellipsis"
+            name="logo-twitter"
+            id="longo"
+          ></ion-icon>
+          <div class="searchbar" id="searchbar">
+            <ion-icon id="search-icon" name="search-outline"></ion-icon>
+            <input type="search" placeholder="Search Twitter" id="ss" />
+            <div class="absolute">
+              <p>Try searching for people, topics or keywords</p>
+            </div>
+          </div>
+          <ion-icon id="setting" name="settings-outline"></ion-icon>
+          <ion-icon
+            class="ellipsis"
+            name="ellipsis-horizontal-outline"
+          ></ion-icon>
+        </div>
+
+        <div class="main-content">
+          <h2>Trends for you</h2>
+          <div class="main-divs" style="margin-top: 1.5rem">
+            <div>
+              <small>Trending worldwide</small>
+              <ion-icon
+                id="diff-toggle"
+                name="ellipsis-horizontal-outline"
+              ></ion-icon>
+              <ul class="diff">
+                <li style="border-radius: 1rem 1rem 0 0">
+                  <a href="#"
+                    ><ion-icon name="sad-outline"></ion-icon> Not interested in
+                    this
+                  </a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><ion-icon name="sad-outline"></ion-icon> This trend is
+                    harmful or spammy</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <p>#MainaAndKingangi</p>
+            <small>3,780 Tweets</small>
+          </div>
+          <div class="main-divs">
+            <div>
+              <small>Sports &middot; Trending</small>
+              <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+            </div>
+            <p style="text-align: right">الكلاسيكو#</p>
+            <small>7,806 Tweets</small>
+          </div>
+          <div class="main-divs">
+            <div>
+              <small>Sports &middot; Trending</small>
+
+              <ion-icon
+                id="diff-toggle"
+                name="ellipsis-horizontal-outline"
+              ></ion-icon>
+            </div>
+            <p>#GalatasaraySK</p>
+            <small>3,728 Tweets</small>
+          </div>
+          <div class="main-divs">
+            <div>
+              <small>Sports &middot; Trending</small>
+
+              <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+            </div>
+            <p>#feyaja</p>
+            <small>22.5K Tweets</small>
+          </div>
+          <div class="main-divs">
+            <div>
+              <small>Politics &middot; Trending</small>
+
+              <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+            </div>
+            <p>Blumenau</p>
+            <small>124K Tweets</small>
+          </div>
+          <div class="main-divs" style="margin-bottom: 1rem">
+            <div>
+              <small>Sports &middot; Trending</small>
+
+              <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+            </div>
+            <p>#GSvİBFK</p>
+            <small>2,832 Tweets</small>
+          </div>
+          <a href="#" style="color: #1d9bf0">Show more</a>
+        </div>
+        <div class="main-posts">
+          <h3>Cats</h3>
+          <div class="post">
+            <img class="profile-img" src="images/cat1.png" alt="" />
+            <div class="post-main">
+              <div>
+                <span style="overflow: hidden"
+                  ><a href="#" class="o-flow"
+                    >Cats That Heal Your Depression</a
+                  >
+                  <a href="#" style="color: #71767b"
+                    >@Catshealdeprsn &middot; 15h</a
+                  ></span
+                >
+                <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+              </div>
+              <small>Love</small>
+              <img src="/images/post1.png" class="post-img" alt="" />
+              <div class="icons-post">
+                <a href="#"
+                  ><ion-icon name="chatbubble-outline"></ion-icon> 46</a
+                >
+                <a href="#"
+                  ><ion-icon name="repeat-outline"></ion-icon> 2,007</a
+                >
+                <a href="#"><ion-icon name="heart-outline"></ion-icon> 13.5K</a>
+                <a href="#"
+                  ><ion-icon name="stats-chart-outline"></ion-icon> 247.6K</a
+                >
+                <a href="#"
+                  ><ion-icon
+                    name="download-outline"
+                    class="share"
+                    style="font-size: 1.4rem"
+                  ></ion-icon
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="post first-post" 
+          >
+            <img class="profile-img" src="images/cat3.png" alt="" />
+            <div class="post-main">
+              <div>
+                <span style="overflow: hidden"
+                  ><a href="#" class="o-flow">Jasmine</a>
+                  <a href="#" style="color: #71767b"
+                    >@astro_jaz &middot; 15h</a
+                  ></span
+                >
+                <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+              </div>
+              <small> NEW JWST IMAGE OF CASSIOPEIA A!!!</small>
+              <img
+                src="/images/post3.png"
+                id="cat-img"
+                class="post-img"
+                alt=""
+              />
+              <div class="icons-post">
+                <a href="#"
+                  ><ion-icon name="chatbubble-outline"></ion-icon> 648</a
+                >
+                <a href="#"><ion-icon name="repeat-outline"></ion-icon> 636</a>
+                <a href="#"><ion-icon name="heart-outline"></ion-icon> 10.2K</a>
+                <a href="#"
+                  ><ion-icon name="stats-chart-outline"></ion-icon> 248.8K</a
+                >
+                <a href="#"
+                  ><ion-icon
+                    name="download-outline"
+                    class="share"
+                    style="font-size: 1.4rem"
+                  ></ion-icon
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="post first-post" 
+          >
+            <img class="profile-img" src="images/cat2.png" alt="" />
+            <div class="post-main">
+              <div>
+                <span style="overflow: hidden"
+                  ><a href="#" class="o-flow"
+                    >translated cats</a
+                  >
+                  <a href="#" style="color: #71767b"
+                    >@TranslatedCats &middot; 23h</a
+                  ></span
+                >
+                <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+              </div>
+              <small>Please give me a name. I am a girl. I am a cat.</small>
+              <img
+                src="/images/post2.png"
+                id="cat-img"
+                class="post-img"
+                alt=""
+              />
+              <div class="icons-post">
+                <a href="#"
+                  ><ion-icon name="chatbubble-outline"></ion-icon> 648</a
+                >
+                <a href="#"><ion-icon name="repeat-outline"></ion-icon> 636</a>
+                <a href="#"><ion-icon name="heart-outline"></ion-icon> 10.2K</a>
+                <a href="#"
+                  ><ion-icon name="stats-chart-outline"></ion-icon> 248.8K</a
+                >
+                <a href="#"
+                  ><ion-icon
+                    name="download-outline"
+                    class="share"
+                    style="font-size: 1.4rem"
+                  ></ion-icon
+                ></a>
+              </div>
+            </div>
+          </div>
+          <a href="#" style="margin: 0 10%; color: #1d9bf0">Show more</a>
+        </div>
+      </div>
+
+      <div class="right-sidebar">
+        <div class="content">
+          <p class="content-head">New to Twitter?</p>
+          <small> Sign up now to get your own personalized timeline! </small>
+          <div class="accounts">
+            <div class="account">
+              <img src="images/google.png" alt="google-icon" />
+              <p>Sign up with Google</p>
+            </div>
+
+            <div class="account apple">
+              <img src="images/apple.png" alt="apple-icon" />
+              <p>Sign up with Apple</p>
+            </div>
+            <div class="account">
+              <p>Create account</p>
+            </div>
+          </div>
+          <div class="below-accounts-text">
+            By signing up, you agree to the <a href="#">Terms of Service</a> and
+            <a href="#">Privacy Policy</a>, including
+            <a href="#">Cookie Use</a>.
+          </div>
+        </div>
+
+        <div class="text">
+          <div class="links">
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Cookie Policy</a>
+            <a href="#">Accessibility</a>
+            <a href="#">Ads info</a>
+            <a href="#" id="more"
+              >More<ion-icon name="ellipsis-horizontal-outline"></ion-icon
+            ></a>
+          </div>
+          <ul class="ul">
+            <li style="border-radius: 1rem 1rem 0 0">
+              <a href="#">About</a>
+            </li>
+
+            <li>
+              <a href="#">Status</a>
+            </li>
+
+            <li>
+              <a href="#">Twitter for Business</a>
+            </li>
+
+            <li style="border-radius: 0 0 1rem 1rem">
+              <a href="#">Developers</a>
+            </li>
+          </ul>
+
+          <div class="overlay"></div>
+
+          <small> &copy; 2023 Twitter, Inc. </small>
+        </div>
+      </div>
+    </div>
+
+    <div class="alert">
+      <div class="left">
+        <p>Don’t miss what’s happening</p>
+        <small>People on Twitter are the first to know.</small>
+      </div>
+      <div class="right">
+        <button id="login" onclick="show_login()">Log in</button>
+        <button id="signup" onclick="show_s()">Sign up</button>
+      </div>
+    </div>
+
+    <div class="login-container" id="l-cont">
+      <div class="login">
+        <div class="login-header">
+          <ion-icon
+            name="close-outline"
+            id="close-login"
+            onclick="hide_login()"
+          ></ion-icon>
+          <ion-icon name="logo-twitter"></ion-icon>
+          <div></div>
+        </div>
+        <div class="login-main">
+          <h1>Sign in to Twitter</h1>
+          <div class="account" style="margin-bottom: 1.5rem">
+            <img src="images/google.png" alt="google-icon" />
+            <p>Sign up with Google</p>
+          </div>
+
+          <div class="account apple">
+            <img src="images/apple.png" alt="apple-icon" />
+            <p>Sign up with Apple</p>
+          </div>
+          <p class="hr-lines">or</p>
+
+          <div class="login-input">
+            <small id="login-small">Phone, email, or username</small>
+            <input type="text" id="log" />
+          </div>
+          <button id="next" onclick="email_pass()">Next</button>
+          <button id="forgot">Forgot password?</button>
+          <p class="p">Don’t have an account?<a href="#">Sign up</a></p>
+          <div id="login-alert">
+            <p>Sorry, we could not find your account.</p>
+          </div>
+        </div>
+      </div>
+      <div class="login login-password">
+        <div class="login-header">
+          <ion-icon
+            name="close-outline"
+            id="close-login"
+            onclick="hide_login()"
+          ></ion-icon>
+          <ion-icon name="logo-twitter"></ion-icon>
+          <div></div>
+        </div>
+
+        <div class="login-main pass-main">
+          <h1>Enter your password</h1>
+          <div class="pass-email-input">
+            <small>Email</small>
+            <input
+              type="text"
+              readonly
+              id="pass-email"
+              value="admin@example.com"
+            />
+          </div>
+          <div class="pass-put">
+            <small id="pass-small">Password</small>
+            <div class="pass-div">
+              <input type="password" id="pass-word" value="admin" />
+              <ion-icon
+                name="eye-outline"
+                id="eye-open"
+                onclick="show_password()"
+              ></ion-icon>
+              <ion-icon
+                name="eye-off-outline"
+                id="eye-close"
+                onclick="hide_password()"
+              ></ion-icon>
+            </div>
+          </div>
+          <a href="#">Forgot password?</a>
+          <button id="login-btn" onclick="login()">Log in</button>
+          <p class="p">Don’t have an account?<a href="#">Sign up</a></p>
+          <div id="pass-alert">
+            <p id="pass-alert-p"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="signup-container" id="sign">
+      <div class="login">
+        <div class="login-header">
+          <ion-icon
+            name="close-outline"
+            id="close-sign"
+            style="cursor: pointer"
+            onclick="hide_signup()"
+          ></ion-icon>
+          <ion-icon name="logo-twitter"></ion-icon>
+          <div></div>
+        </div>
+        <div class="login-main signup-main">
+          <h1>Join Twitter today</h1>
+          <div class="account" style="margin-bottom: 1.5rem">
+            <img src="images/google.png" alt="google-icon" />
+            <p>Sign up with Google</p>
+          </div>
+
+          <div class="account apple">
+            <img src="images/apple.png" alt="apple-icon" />
+            <p>Sign up with Apple</p>
+          </div>
+          <p class="hr-lines">or</p>
+
+          <div class="account">
+            <p>Create account</p>
+          </div>
+          <div class="below-accounts-text">
+            By signing up, you agree to the <a href="#">Terms of Service</a> and
+            <a href="#">Privacy Policy</a>, including
+            <a href="#">Cookie Use</a>.
+          </div>
+          <p class="p" style="font-size: 1rem; margin-bottom: 3rem">
+            Don’t have an account?<a href="#">Sign up</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- custom js -->
+    <script src="js/main.js"></script>
+    <!-- font awesome -->
+    <script src="js/all.js"></script>
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- ion icons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
